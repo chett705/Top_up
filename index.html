@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- ------------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- ------------------------------------------- -->
+ <script src="./js/Node.js"></script>
+</head>
+<body>
+    <div class="container-fluid bg-dark pt-3">
+        <header class="" id="bar">
+            <div class="d-flex justify-content-evenly ">
+                <div class="nav_bar d-flex">
+                    <!-- <div id="logo" class="me-2 rounded-5 " ">
+                        <img src="./image/logo/dalin.png" alt="" width="100%" style="border-radius: 10px;">
+                    </div> -->
+                <div>
+                    
+
+                    <h2 class="text-light">Atoza Store</h2>
+                </div>
+                
+            </div>
+            <div id="btn">
+                <button class="btn rounded-5">Login</button>
+            </div> 
+            </div>
+            <div>
+                <div class="image mt-3 h-100" >
+                    <img src="./image/pic/banner.png" alt="" width="100%" class="h-100">
+                </div>
+                <div class="btn_1 align-items-center justify-content-evenly d-flex mt-3 ms-3 me-5" id="buton">
+                    <button class="btn"><a href="#title" class="text-decoration-none text-black">Top up</a></button>
+                    <button  class="btn"> <a href="#introduction" class="text-decoration-none text-black">introduction</a></button>
+                </div>
+                <div id="intro" class="container-fluid mt-5 bg-light pb-2">
+                    <div id="img" class="">
+                        <img src="./image/logo/mlbb.png" alt="" width="100%">
+                    </div>
+                    <div id="txt" >
+                        <p id="introduction">ទិញពេជ្រ Mobile Legends ដោយខ្លួនឯង! បញ្ចូលពេជ្រ Mobile Legends: Bang Bang តាមរយះ អាយឌី ID របស់អ្នក, ជ្រើសរើសកញ្ចប់ពេជ្រ ដែលអ្នកពេញចិត្តទិញ, បង់ប្រាក់តាមមធ្យោបាយដែលអ្នកមាន, ពេជ្រនឹងបញ្ជូនទៅក្នុងគណនេយ្យ MLBB របស់អ្នកភ្លាមៗ។</p>
+
+                    </div>
+                    
+
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container-fluid mt-3 ps-1 pe-1">
+                <div class="card shadow p-4">
+                    <h4 class="text-center text-white  p-1 rounded" id="title">Check ID</h4>
+                    <form class="">
+                        <!-- User ID Field -->
+                        <div class="mb-3 ">
+                            <label for="userId" class="form-label border-0">User ID</label>
+                            <input type="number" class="form-control shadow-none" id="userId" placeholder="Enter your User ID" required>
+                        </div>
+        
+                        <!-- Server ID Field -->
+                        <div class="mb-3">
+                            <label for="serverId" class="form-label ">Server ID</label>
+                            <div class="input-group">
+                                
+                                <input type="number" class="form-control text-center shadow-none" id="serverId" placeholder="Zone ID" required>
+                                
+                            </div>
+                        </div>
+        
+                        <!-- Check ID Button -->
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-danger border-0" onclick="checkID()" id="title1">Check ID</button>
+                        </div>
+                    </form>
+        
+                    <!-- Display Result -->
+                    <p class="mt-3 text-center text-muted" id="result"></p>
+                </div>
+            </div>
+            <!-- -------------------------------------------- -->
+
+            <div class="container bg-light mt-3 rounded-3">
+                <div class="text-white bg-pink p-3 rounded text-center">
+                    <h4 class="text-dark" id="topup">ប្រើប្រាស់សិទ្ធិ</h4>
+                </div>
+                <div class=" justify-content-center align-items-center d-flex  flex-wrap p-2 gap-2" id="dia" >
+            
+                    <div class="mb-3" id="card">
+                        <input type="radio" id="option1" name="diamond" checked>
+                        <label for="option1" class="option-card">14 Diamonds +
+                            <br>
+                            0.30$
+                        </label>
+                    </div>
+            
+                    <div class="mb-3" id="card1"> <!-- Fixed 'cid' to 'id' -->
+                        <input type="radio" id="option2" name="diamond">
+                        <label for="option2" class="option-card">28 Diamonds <br>
+                            0.50$</label>
+                    </div>
+            
+                    <div class="mb-3" id="card2">
+                        <input type="radio" id="option3" name="diamond">
+                        <label for="option3" class="option-card">55 Double Recharge Promo
+                            <br>
+                            1.00$
+                        </label>
+                    </div>
+            
+                    <div class="mb-3" id="card3">
+                        <input type="radio" id="option4" name="diamond">
+                        <label for="option4" class="option-card">82 Diamonds 
+                            <br>
+                            1.55$
+                        </label>
+                    </div>
+
+                    <div class="mb-3" id="card3">
+                        <input type="radio" id="option4" name="diamond">
+                        <label for="option4" class="option-card">Weekly past <br>
+                            1.45$
+
+                        </label>
+                        
+                    </div>
+
+                    <div class="mb-3" id="card3">
+                        <input type="radio" id="option4" name="diamond">
+                        <label for="option4" class="option-card">100 Diamonds <br>
+                            1.90$</label>
+                    </div>
+
+                    <div class="mb-3" id="card3">
+                        <input type="radio" id="option4" name="diamond">
+                        <label for="option4" class="option-card">152 Diamonds <br>
+                        2.90$</label>
+                    </div>
+                    <div class="mb-3" id="card3">
+                        <input type="radio" id="option4" name="diamond">
+                        <label for="option4" class="option-card">252 Diamonds <br>
+                        5.90$</label>
+                    </div>
+                    <div class="mb-3" id="card3">
+                        <input type="radio" id="option4" name="diamond">
+                        <label for="option4" class="option-card">320 Diamonds <br>
+                        6.90$</label>
+                    </div>
+                    <div class="mb-3" id="card3">
+                        <input type="radio" id="option4" name="diamond">
+                        <label for="option4" class="option-card">520 Diamonds <br>
+                        9.99$</label>
+                    </div>
+            
+                </div>
+            </div>
+            <!-- -------------------------------------------- -->
+             <div class="container-fluid​​​ bg-light mt-3 rounded-3">
+                <div class="text-white bg-pink p-3 rounded text-center">
+                    <h4 class="text-dark">បង់ប្រាក់</h4>
+                </div>
+                <div>
+                    <div class="d-flex justify-content-evenly mb-0">
+                        <div>
+                            
+                            <div class="to">
+                                
+                                    <h4>KH QR</h4>
+                                <p class="m-0">Scan to pay with member bank app</p>
+                               
+                                
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <div> 
+                        <input type="checkbox" name="" id=" " class=" form-check-input m-0 mb-0 mt-1 me-0 ms-2 pt-2">
+                        <span class="span mb-5 mt-0 ms-1">I agree to all orders and there is no cancellation or refund</span>
+                    </div>
+                    <div class="ps-4">
+                        <button type="button" class="btn btn-primary mb-5 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Buy your choice
+                          </button>
+                          
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" >
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-3" id="exampleModalLabel">Buy Now</h1>
+                                  <!-- Close button -->
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="qr w-70 h-70 align-items-center justify-content-center ms-2 me-2">
+                                    <img src="./image/pic/Qr.png" alt="QR Code" width="100%">
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <!-- Close button in the footer -->
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="bt">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                
+
+
+             </div>
+            
+            
+
+            <!-- ----footer----------------------------------- -->
+            
+                    <!-- <button class="btn mb-4 mt-3 " id="total">Total:0,00</button>
+                    <button type="submit" class="btn btn-secondary">Buy Now</button> -->
+                    <!-- Button trigger modal -->
+                    <!-- <button type="button" class="btn btn-primary mb-5 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Buy your choice
+                      </button>
+                      
+                    
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Buy Now</h1>
+                              
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="qr w-70 h-70 align-items-center justify-content-center ms-5 me-5">
+                                <img src="./image/pic/Qr.png" alt="QR Code" width="100%">
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div> -->
+             
+        </main>
+       
+
+       
+
+    </div>
+</body>
+<script>
+   function checkID() {
+    let userId = document.getElementById("userId").value;
+    let serverId = document.getElementById("serverId").value;
+
+    if (userId && serverId) {
+        // Send the data to your server-side API
+        fetch('https://your-server.com/api/checkID', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ userId: userId, serverId: serverId })
+        })
+        .then(response => response.json())  // Assuming the server responds with JSON
+        .then(data => {
+            if (data.success) {
+                document.getElementById("result").innerHTML = `Account Name: <b>${userId}</b> (Zone ${serverId})`;
+            } else {
+                document.getElementById("result").innerHTML = "Error: " + data.message;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById("result").innerHTML = "An error occurred while checking the account.";
+        });
+    } else {
+        document.getElementById("result").innerHTML = "Please fill in all fields.";
+    }
+}
+
+    // -----------------------------------------------------------------------------
+    
+
+</script>
+</html>
