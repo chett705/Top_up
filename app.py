@@ -6,7 +6,7 @@ DATA_FILE = "user_data.txt"
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return ('index.html')
 
 @app.route('/api/checkID', methods=['POST'])
 def check_id():
