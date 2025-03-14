@@ -261,6 +261,22 @@
     </div>
 </body>
 <script>
+   document.querySelectorAll(".option-card").forEach(card => {
+    card.addEventListener("click", function () {
+        document.querySelectorAll(".option-card ").forEach(c => c.classList.remove("selected")); // Remove previous selection
+        this.classList.add("selected"); // Apply new selection
+    });
+});
+
+   document.querySelectorAll(".to").forEach(card => {
+    card.addEventListener("click", function () {
+        document.querySelectorAll(".to ").forEach(c => c.classList.remove("selected")); // Remove previous selection
+        this.classList.add("selected"); // Apply new selection
+    });
+});
+
+
+
    function checkID() {
     let userId = document.getElementById("userId").value;
     let serverId = document.getElementById("serverId").value;

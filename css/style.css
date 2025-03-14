@@ -102,7 +102,7 @@ footer{
     border: 1px solid var(--pink4);/* Adjust width to fit in 2 columns */
     
 }
-.option-card:hover, .option-card:focus-within input:checked + label {
+.option-card.selected {
     background-color: var(--pink3);
     color: white;
 }
@@ -133,7 +133,7 @@ input[type="radio"] {
     padding: 10px 10px 4px;
     border-radius: 3px;
 }
-.to:hover{
+.to.selected {
     background-color: #cd84ee;
     color: white; 
     border: 1px solid var(--pink5);
