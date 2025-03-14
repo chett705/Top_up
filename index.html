@@ -13,7 +13,7 @@
  <script src="./js/Node.js"></script>
 </head>
 <body>
-    <div class="container-fluid bg-dark pt-3">
+    <div class="container-fluid bg-dark pt-3" method="POST" >
         <header class="" id="bar">
             <div class="d-flex justify-content-evenly ">
                 <div class="nav_bar d-flex">
@@ -310,6 +310,34 @@
 
     // -----------------------------------------------------------------------------
     
+    function checkID() {
+    let userId = document.getElementById("userId").value;
+    let serverId = document.getElementById("serverId").value;
 
+    if (userId && serverId) {
+        // Send the data to your Flask server
+        fetch('http://127.0.0.1:5000/api/checkID', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ userId: userId, serverId: serverId })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById("result").innerHTML = `Account Name: <b>${data.userId}</b> (Zone ${data.serverId})`;
+            } else {
+                document.getElementById("result").innerHTML = "Error: " + data.message;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById("result").innerHTML = "An error occurred while checking the account.";
+        });
+    } else {
+        document.getElementById("result").innerHTML = "Please fill in all fields.";
+    }
+}
 </script>
 </html>
