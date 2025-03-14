@@ -1,8 +1,12 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
 DATA_FILE = "user_data.txt"
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/api/checkID', methods=['POST'])
 def check_id():

@@ -35,14 +35,16 @@ header{
 }
 .image{
     width: 100%;
-    height: 100vh;
+    height: 20vh;
     
 }
-#buton > button{
+#buton > a{
     align-items: center;
     
     justify-content: space-evenly;
     background-color: var(--pink5);
+    border: none;
+    color: white;
 
 }
 #intro{
